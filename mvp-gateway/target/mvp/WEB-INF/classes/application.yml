@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    active: test
+    mvc:
+     static-path-pattern: /static/**
+    aop:
+      proxy-target-class: true
+  jackson:
+    time-zone: GMT+8
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 50MB
+server:
+  port: 9010
+  servlet:
+    context-path: /mvp
+
+
+logging:
+  level:  
+    org.cybercrowd.mvp.mapper: debug
+mybatis:
+  mapper-locations: classpath:sqlmap/**/*.xml
+  
+#元转分倍率  
+yuan2fenMultiple: 100
+
+aws:
+  s3:
+    access_key: AKIA5EBEFNWV7IS3BGWF
+    secret_key: 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
+    bucket_name: cybercrowd.bucket
+    base_url: https://s3.ap-southeast-1.amazonaws.com
+
+
+
+
+
